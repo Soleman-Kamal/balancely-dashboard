@@ -7,17 +7,17 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-    plugins: [react()],
+  plugins: [react()],
 
-    base: "/balancely-dashboard/",
+  base: "/",
 
-    server: {
-        port: 3000,
+  server: {
+    port: 3000,
+  },
+
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
     },
-
-    resolve: {
-        alias: {
-            "@": path.resolve(__dirname, "./src"),
-        },
-    },
+  },
 });
